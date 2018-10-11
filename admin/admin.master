@@ -1,0 +1,193 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="admin_admin, App_Web_tjg4qwvn" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        html, form, body
+        {
+            height:100%;
+        }
+        
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        
+        body
+        {
+            overflow: hidden;
+        }
+        
+        header
+        {
+            height: 10vh;
+            top: 0;
+            padding: 1vh;
+        }
+        
+        aside
+        {
+            float:left;
+            width: 10vw;
+            background-color: black;
+            height: 100%;
+        }
+        
+        nav
+        {
+            width: 100%;
+        }
+        
+        aside ul
+        {
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        aside ul li
+        {
+            
+            padding: 10px 0;
+            width:100%;
+        }
+        
+        aside ul li a
+        {
+            width: 100%;
+            color: White;
+            padding: 15px;
+            text-decoration: none;
+        }
+        
+        aside ul li a:hover
+        {
+            background-color: red;
+        }
+        
+        header h1{
+            float: left;
+            margin-top: 10px;
+        }
+
+        header h2{
+            float: right;
+        }
+        
+        footer{
+            color: white;
+            background-color: #262626;
+            height: 10vh;
+            line-height: 10vh;
+            vertical-align: middle;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        main
+        {
+            overflow: auto;
+            height: 75vh;
+            padding: 7px;
+        }
+        
+        .heading
+        {
+            text-align: center;
+            text-decoration: underline;
+        }
+        
+        .sub-heading
+        {
+            text-decoration: underline;
+        }
+        
+        .text
+        {
+            font-size: 20px;
+        }
+        
+        .btn
+        {
+            background-color: Transparent;
+            border: black 3px solid;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        
+        .btn:hover
+        {
+            color: White;
+            background-color: Black;
+        }
+        
+        .TxtInput
+        {
+            margin: 0 10px 0 5px;
+            text-transform: capitalize;
+            font-size: 18px;
+            border: none;
+            padding: 2px;
+            border-bottom: 3px solid black;
+        }
+        
+        .error
+        {
+            background-color: Yellow;
+            color: Red;
+            font-size: 15px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header style="text-transform: capitalize;">
+            <h1><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
+            <h2><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label><br /><asp:Button ID="Button1" runat="server" Text="Logout" 
+                    CssClass="btn" onclick="Button1_Click"></asp:Button></h2>
+        </header><hr>
+        <aside>
+            <nav>
+            <ul>
+                <li>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/admin/home.aspx">Home</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/admin/results.aspx">Result</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/admin/students.aspx">New Student</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/admin/questions.aspx">Questions</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/admin/staff.aspx">Staff</asp:HyperLink>
+                </li>
+            </ul>
+            </nav>
+        </aside>
+        <main>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            Prelude Public School 2018&copy; All Rights Reserved.
+        </footer>
+    </form>
+</body>
+</html>
